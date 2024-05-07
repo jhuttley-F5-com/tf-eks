@@ -20,3 +20,6 @@ output "cluster_name" {
   description = "Kubernetes Cluster Name"
   value       = module.eks.cluster_name
 }
+output "kubeconfig-certificate-authority-data" {
+  value = module.eks.certificate_authority[0].data
+}
